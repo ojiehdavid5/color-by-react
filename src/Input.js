@@ -1,10 +1,22 @@
 import React from 'react'
 
-const Input = ({colorValue,setColorValue}) => {
+import colorNames from 'colornames'
+
+const Input = ({colorValue,setColorValue ,setHexValue}) => {
   return (
-    <div>
-      <p>input</p>
-    </div>
+    <form onSubmit={(e)=>e.preventDefault()}>
+      <label>Add color Name:</label>
+      <input
+      type='text'
+      value={colorValue}
+      autoFocus
+      required
+      placeholder='Add color Name'
+      onChange={(e)=>{
+      setColorValue(e.target.value);
+      setHexValue(colorNames(e.target.value))}}
+/>
+    </form>
   )
 }
 

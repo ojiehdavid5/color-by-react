@@ -1,14 +1,18 @@
 import React from 'react'
 
-const Square = ({colorValue}) => {
+const Square = ({colorValue ,hexValue,isDarkText}) => {
   return (
     <div>
         <section 
         className='square'
-        style={{backgroundColor: colorValue}}
+        style={{backgroundColor: colorValue,
+          color:isDarkText?"#000":'#fff'
+        
+        }}
         
         >
         <p>{colorValue?colorValue:'Empty value'}</p>
+        <p>{hexValue?hexValue:null}</p>
 
         </section>
 
