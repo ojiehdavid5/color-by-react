@@ -9,6 +9,7 @@ const Input = ({colorValue,setColorValue ,setHexValue ,isDarkText,setIsDarkText 
       <input
       type='text'
       value={colorValue}
+      
       autoFocus
       required
       placeholder='Add color Name'
